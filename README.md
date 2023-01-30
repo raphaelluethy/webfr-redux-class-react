@@ -1,6 +1,7 @@
 # Intention
 
 !!DISCLAIMER!!
+
 This project might hurt your eyes, soul and brain.
 Only one developer sustained any damage writing Class based components in 2023.
 
