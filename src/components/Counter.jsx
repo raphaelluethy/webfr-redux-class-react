@@ -10,12 +10,14 @@ class Counter extends React.Component {
         };
 
         this.increment = this.increment.bind(this);
-        this.decrement = this.decrement.bind(this);
 
-
+        // This won't need to be bound if you use the arrow function syntax, as
+        // the arrow function syntax automatically binds the function to the
+        // class instance.
+        // this.decrement = this.decrement.bind(this);
     }
 
-    increment = () => {
+    increment() {
         this.setState({
             counter: this.state.counter + 1,
         });
