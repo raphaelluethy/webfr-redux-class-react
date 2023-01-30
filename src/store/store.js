@@ -50,10 +50,9 @@ const TODO_REDUCERS = {
         const todo = {
             id: state.length,
             text: action.text,
-            completed: false
+            completed: false,
         };
-        state.todos.push(todo);
-        return [...state];
+        return [...state, todo];
     },
     'todo/deleted': (state, action) => {
         _.remove(state, {id: action.id});
@@ -64,22 +63,6 @@ const TODO_REDUCERS = {
 const todoReducer = (state = initialState, action) => {
     return TODO_REDUCERS[action.type] ? TODO_REDUCERS[action.type](state, action) : state;
 };
-
-// const REDUCERS = {
-//     'todo/completed': (state, action) => (),
-//     'counter/decremented': (state, action) => (state - 1)
-// };
-// const WAITING_REDUCERS = {
-//     'counter/waiting': (state, action) => true,
-//     'counter/received': (state, action) => false
-// };
-
-// const counterReducer = (state = 0, action) => {
-//     return REDUCERS[action.type] ? REDUCERS[action.type](state, action) : state;
-// };
-// const waitingReducer = (state = false, action) => {
-//     return WAITING_REDUCERS[action.type] ? WAITING_REDUCERS[action.type](state, action) : state;
-// };
 
 const reducers = redux.combineReducers({
     todos: todoReducer
