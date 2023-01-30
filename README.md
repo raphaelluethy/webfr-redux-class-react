@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Intention
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+!!DISCLAIMER!!
+This project might hurt your eyes, soul and brain.
+Only one developer sustained any damage writing Class based components in 2023.
+
+Generally: This project is solely for the purpose of repeating the concepts of:
+- React Class based components
+- React functional components
+- React Hooks
+- Redux
+- Redux Thunk
 
 ## Available Scripts
 
